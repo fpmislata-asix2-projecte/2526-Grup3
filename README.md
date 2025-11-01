@@ -10,7 +10,7 @@ Este repositorio contiene toda la documentación del proyecto, dividida en sus c
 
 ---
 
-## 📍 Tabla de Contenidos
+## Tabla de Contenidos
 
 * [1. Plan de Empresa (Connectix)](#1-plan-de-empresa-connectix)
 * [2. Infraestructura (Servidor Proxmox)](#2-infraestructura-servidor-proxmox)
@@ -19,7 +19,7 @@ Este repositorio contiene toda la documentación del proyecto, dividida en sus c
 
 ---
 
-## 📂 Estructura del Repositorio
+## Estructura del Repositorio
 
 Este repositorio está organizado en varias carpetas principales. Este fichero (`README.md`) es la visión general del proyecto.
 
@@ -39,7 +39,7 @@ Aquí se documenta la configuración y gestión de la infraestructura de desarro
 
 ### 3. Gestión del Proyecto (GitHub)
 
-Esta carpeta define nuestro flujo de trabajo (workflow) y cómo utilizamos las herramientas de GitHub para gestionar el desarrollo del proyecto. Incluye nuestra metodología GitFlow (ramas `main` y `develop`), el uso de GitHub Projects (Kanban) para el seguimiento de tareas (Issues) y el proceso estandarizado de Pull Requests (PRs).
+Esta carpeta define nuestro flujo de trabajo y cómo utilizamos las herramientas de GitHub para gestionar el desarrollo del proyecto. Incluye nuestra metodología GitFlow, el uso de GitHub Projects  para el seguimiento de tareas (Issues) y el proceso estandarizado de Pull Requests (PRs).
 
 ➡️ **Ver detalles en: [./github/README.md](Github\README.md)**
 
