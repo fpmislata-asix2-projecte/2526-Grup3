@@ -1,27 +1,53 @@
-# Connectix: Sistema Local de Integración Logística Inteligente
+<p align="center">
+  <img src="imágenes\logo.png" alt="Logo Connectix" width="300"/>
+</p>
 
-## Desarrollado por: Connectix
+# Connectix: Sistema de Integración Logística Inteligente
 
-## Introducción
+Connectix es un proyecto que desarrolla un **sistema local de integración inteligente** diseñado para digitalizar y sincronizar los procesos logísticos de pequeñas y medianas empresas. El sistema actúa como un "puente" que conecta los datos del GPS de los vehículos, el ERP empresarial y el sistema de almacén (WMS) sin depender de la nube, unificando el flujo de información y reduciendo errores operativos.
 
-**Connectix** ofrece la solución definitiva para la gestión logística moderna. Nuestro sistema unifica de forma inteligente los datos críticos de su empresa en una única plataforma **local** y en **tiempo real**, garantizando la autonomía y la eficiencia operativa.
+Este repositorio contiene toda la documentación del proyecto, dividida en sus componentes principales: el modelo de negocio, la infraestructura técnica y la gestión del desarrollo.
 
-## Descripción
+---
 
-Connectix desarrolla un sistema local de integración inteligente que conecta los datos del **GPS de los vehículos**, el **ERP empresarial** y el **almacén (WMS)** sin necesidad de depender de la nube.
+## 📍 Tabla de Contenidos
 
-Su objetivo es digitalizar y sincronizar los procesos logísticos de pequeñas y grandes empresas, mejorando la comunicación entre departamentos y reduciendo errores operativos.
+* [1. Plan de Empresa (Connectix)](#1-plan-de-empresa-connectix)
+* [2. Infraestructura (Servidor Proxmox)](#2-infraestructura-servidor-proxmox)
+* [3. Gestión del Proyecto (GitHub)](#3-gestión-del-proyecto-github)
+* [Autores](#-autores)
 
-## Componente Principal
+---
 
-Un **servidor local ligero** que actúa como un “puente” entre los distintos sistemas digitales de la empresa.
+## 📂 Estructura del Repositorio
 
-## Flujo de Integración
+Este repositorio está organizado en varias carpetas principales. Este fichero (`README.md`) es la visión general del proyecto.
 
-1.  **Recoge** datos del GPS (ubicación, rutas, entregas).
-2.  **Los integra** automáticamente con el ERP (pedidos, facturas, clientes).
-3.  **Sincroniza** esa información con el WMS (entradas/salidas, stock).
+Para obtener información detallada sobre cada componente, por favor, consulta el `README.md` secundario que se encuentra dentro de cada carpeta respectiva.
 
-## Beneficio Clave
+### 1. Plan de Empresa (Connectix)
 
-El resultado es un flujo de información **unificado, accesible y actualizado en tiempo real**, sin depender de internet o plataformas externas.
+Esta sección contiene todo el análisis de negocio y el informe profesional del proyecto Connectix. Incluye el modelo de negocio, la propuesta de valor, el análisis de mercado, los segmentos de clientes y el plan de viabilidad.
+
+➡️ **Ver detalles en: [./empresa/README.md](Empresa\README.md)**
+
+### 2. Infraestructura (Servidor Proxmox)
+
+Aquí se documenta la configuración y gestión de la infraestructura de desarrollo y pruebas. Se utiliza Proxmox para virtualizar los diferentes componentes del sistema.
+
+➡️ **Ver detalles en: [./proxmox/README.md](Proxmox\README.md)**
+
+### 3. Gestión del Proyecto (GitHub)
+
+Esta carpeta define nuestro flujo de trabajo (workflow) y cómo utilizamos las herramientas de GitHub para gestionar el desarrollo del proyecto. Incluye nuestra metodología GitFlow (ramas `main` y `develop`), el uso de GitHub Projects (Kanban) para el seguimiento de tareas (Issues) y el proceso estandarizado de Pull Requests (PRs).
+
+➡️ **Ver detalles en: [./github/README.md](Github\README.md)**
+
+---
+
+## 👥 Autores
+
+* Shahzaib Waheed
+* Aarón Vizcaíno
+* Alessandro Moscatelli
+* Jacobo Navarro
