@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="imágenes\logo.png" alt="Logo Connectix" width="300"/>
+  <img src="imágenes/logo.png" alt="Logo Connectix" width="300"/>
 </p>
 
 # Connectix: Sistema de Integración Logística Inteligente
@@ -29,19 +29,19 @@ Para obtener información detallada sobre cada componente, por favor, consulta e
 
 Esta sección contiene todo el análisis de negocio y el informe profesional del proyecto Connectix. Incluye el modelo de negocio, la propuesta de valor, el análisis de mercado, los segmentos de clientes y el plan de viabilidad.
 
-➡️ **Ver detalles en: [./empresa/README.md](Empresa\README.md)**
+➡️ **Ver detalles en: [./empresa/README.md](./empresa/README.md)**
 
 ### 2. Infraestructura (Servidor Proxmox)
 
 Aquí se documenta la configuración y gestión de la infraestructura de desarrollo y pruebas. Se utiliza Proxmox para virtualizar los diferentes componentes del sistema.
 
-➡️ **Ver detalles en: [./proxmox/README.md](Proxmox\README.md)**
+➡️ **Ver detalles en: [./proxmox/README.md](./proxmox/README.md)**
 
 ### 3. Gestión del Proyecto (GitHub)
 
-Esta carpeta define nuestro flujo de trabajo y cómo utilizamos las herramientas de GitHub para gestionar el desarrollo del proyecto. Incluye nuestra metodología GitFlow, el uso de GitHub Projects  para el seguimiento de tareas (Issues) y el proceso estandarizado de Pull Requests (PRs).
+Esta carpeta define nuestro flujo de trabajo y cómo utilizamos las herramientas de GitHub para gestionar el desarrollo del proyecto. Incluye nuestra metodología GitFlow, el uso de GitHub Projects  para el seguimiento de tareas (Issues) y el proceso estandarizado de Pull Requests (PRs).
 
-➡️ **Ver detalles en: [./github/README.md](Github\README.md)**
+➡️ **Ver detalles en: [./github/README.md](./github/README.md)**
 
 ---
 
