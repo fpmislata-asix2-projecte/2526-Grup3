@@ -21,7 +21,7 @@ Este repositorio contiene toda la documentación del proyecto, dividida en sus c
 
 ## Estructura del Repositorio
 
-Este repositorio está organizado en varias carpetas principales. Este fichero (`README.md`) es la visión general del proyecto.
+Este repositorio está organizado en varias carpetas principales. Este fichero es la visión general del proyecto.
 
 Para obtener información detallada sobre cada componente, por favor, consulta el `README.md` secundario que se encuentra dentro de cada carpeta respectiva.
 
