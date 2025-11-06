@@ -7,7 +7,7 @@ Cada sección tiene su propia carpeta que contiene un README.md con la informaci
 ## 📂 Índice de Secciones
 
 * ➡ *[Necesidades y Problemática](./Necesidades%20y%20Problemática/README.md)*
-    * El contexto, los problemas del sector y las necesidades que Connectix viene a resolver.
+    * El contexto, los problemas del sector y las necesidades que Connectix viene a resolver esas necesidades.
 
 * ➡ *[Propuesta de Valor](./Propuesta%20de%20Valor/README.md)*
     * Qué problema resolvemos y por qué nuestra solución es única.
