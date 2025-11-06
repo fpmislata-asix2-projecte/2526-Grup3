@@ -6,7 +6,7 @@ Cada sección tiene su propia carpeta que contiene un README.md con la informaci
 
 ## 📂 Índice de Secciones
 
-* ➡ *[Lienzo modelo de negocio](.\Lienzo%20modelo%20de%20negocio\imagen.png)*
+* ➡ *[Lienzo modelo de negocio](./Lienzo%20modelo%20de%20negocio/imagen.png)*
     * Canca del modelo de negocio de Connectix
 
 * ➡ *[Necesidades y Problemática](./Necesidades%20y%20Problemática/README.md)*
