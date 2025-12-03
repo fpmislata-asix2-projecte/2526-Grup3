@@ -4,10 +4,9 @@
 
 # Connectix – Conecta. Optimiza. Avanza
 
-Connectix es un proyecto que desarrolla un **sistema local de integración inteligente** diseñado para digitalizar y sincronizar los procesos logísticos de pequeñas y medianas empresas. El sistema actúa como un "puente" que conecta los datos del GPS de los vehículos, el ERP empresarial y el sistema de almacén (WMS) sin depender de la nube, unificando el flujo de información y reduciendo errores operativos.
+Connectix es un proyecto enfocado en el diseño e implementación de infraestructura tecnológica integral para pequeñas y medianas empresas (PYMEs) del sector logístico. Nuestro objetivo es proporcionar un Servidor "Todo-en-Uno" (Connectix Hub) que aloja de forma segura todos los servicios esenciales (ERP, GPS, Web, LDAP), sustituyendo la fragmentación de sistemas y unificando el flujo de información.
 
 Este repositorio contiene toda la documentación del proyecto, dividida en sus componentes principales: el modelo de negocio, la infraestructura técnica y la gestión del desarrollo.
-
 ---
 
 ## Tabla de Contenidos
