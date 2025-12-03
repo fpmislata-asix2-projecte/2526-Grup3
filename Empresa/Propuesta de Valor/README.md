@@ -5,16 +5,17 @@
 * La descoordinación entre sistemas que genera errores en pedidos y duplicación de datos.
 * La ineficiencia en la gestión de inventarios, que provoca exceso o escasez de stock.
 * La falta de visibilidad en tiempo real, dificultando la toma de decisiones.
+* La falta de personal de IT interno y la complejidad de instalar y mantener servidores.
 
 ### Beneficio principal
 
-Digitaliza los procesos operativos clave, unificando información de rutas, entregas y stock, mejorando eficiencia y reduciendo errores humanos.
+Entrega de infraestructura **"llave en mano"** (Connectix Hub) que aloja de forma segura todos los servicios esenciales (ERP, GPS, Web, LDAP) y permite a las PYMEs operar con autonomía, seguridad y bajo un modelo de servicio gestionado.
 
-### Valor añadido de Connectix (con digitalización)
+### Valor añadido de Connectix (El nuevo servicio)
 
-1.  **Digitalización de procesos logísticos:** Automatiza la sincronización entre GPS, ERP y almacén, eliminando entradas manuales y permitiendo decisiones basadas en datos actualizados.
-2.  **Integración sin depender de la nube:** Permite a pymes digitalizar su operación sin incurrir en altos costos de software en la nube.
-3.  **Reducción de errores y duplicaciones:** Al digitalizar la transferencia de información entre sistemas, se evita la pérdida de datos y retrasos.
-4.  **Mejora de eficiencia y competitividad:** La digitalización permite optimizar rutas, inventario y entregas, reduciendo costos y mejorando el servicio al cliente.
-5.  **Escalable y asequible:** La solución local permite digitalizar gradualmente los procesos, creciendo con la empresa sin inversiones iniciales altas.
-6.  **Contribución indirecta a sostenibilidad:** La digitalización reduce papel, errores y desplazamientos innecesarios.
+1.  **Entrega "Plug & Play" (Sin Barreras Técnicas):** Proporcionamos el servidor físico con todo el software Open Source esencial preinstalado y securizado. El cliente solo tiene que enchufar y empezar a usar.
+2.  **Soberanía del Dato y Seguridad Local:** Permite al cliente mantener el control total de su información crítica físicamente en sus oficinas, eliminando la dependencia de nubes de terceros.
+3.  **Modelo de Servicio Escalable (Suscripciones):** Ofrecemos planes (Básico, Profesional, Enterprise) que se adaptan al crecimiento, garantizando ingresos recurrentes y soporte 24/7 en los planes superiores.
+4.  **Gestión Profesional Remota (MSP):** Nos encargamos de la monitorización, los backups programados y la aplicación de parches de seguridad de la infraestructura del cliente.
+5.  **Amplitud de Solución:** El Hub soluciona de golpe el problema logístico (ERP/GPS) y el problema corporativo (Web/LDAP) de la PYME.
+6.  **Costo Total de Propiedad (TCO) Competitivo:** Eliminamos los altos costos iniciales de implantación y las cuotas por usuario de los SaaS tradicionales.
