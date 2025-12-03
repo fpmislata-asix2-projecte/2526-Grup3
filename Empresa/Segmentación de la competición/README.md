@@ -1,31 +1,31 @@
-# Segmento de Clientes
+# Segmentación de Competición
 
-¿Quiénes se beneficiarán más de nuestro producto?
+### 1. Soluciones SaaS Puras (Ej. Holded, FleetMatic)
+Estas son aplicaciones web que viven completamente en la nube y se pagan por usuario o por funcionalidad.
 
-Para Connectix, los clientes serían empresas que tienen:
-* **Pequeñas y medianas empresas logísticas**
-    * Con flotas de vehículos propios.
-    * Que usan ERP y WMS, pero sus sistemas no están conectados.
-* **Empresas que quieren digitalizar sus procesos logísticos**
-    * Reducir errores de inventario.
-    * Mejorar coordinación entre transporte, almacén y administración.
+* **Pros suyos:**
+    * Muy fáciles de empezar a usar, sin necesidad de hardware local.
+    * Mantenimiento y actualizaciones gestionadas por el proveedor (despreocupación total del cliente).
+* **Nuestra ventaja:**
+    * **Costo Total de Propiedad (TCO):** Connectix es más económico a largo plazo al no tener cuotas por usuario.
+    * **Soberanía del Dato:** Nuestros clientes mantienen el control físico de su información sensible, algo crucial para la seguridad y la latencia.
 
-### Sectores específicos
+### 2. Implantadores Tradicionales (Ej. Partners de SAP/Navision)
+Empresas que instalan soluciones ERP robustas y altamente personalizadas, enfocadas a grandes empresas.
 
-* Distribuidores de productos alimenticios, farmacéuticos, retail, ecommerce.
-* Empresas con entrega directa al cliente final (last mile delivery).
+* **Pros suyos:**
+    * Soluciones extremadamente potentes, escalables y con capacidades de personalización profundas.
+    * Historial probado en grandes corporaciones.
+* **Nuestra ventaja:**
+    * **Rendimiento y Accesibilidad:** Somos mucho más rápidos, accesibles y económicos para una pequeña empresa.
+    * **Enfoque PYME:** No requerimos licencias ni consultoría inicial masiva; ofrecemos un producto estandarizado y funcional en días, no en meses.
 
-### Empresas reales que podrian utilizar nuestro producto:
+### 3. El Informático Freelance o PYME Local de IT
+Técnicos locales que atienden de forma cercana las necesidades puntuales de las PYMEs.
 
-1.  **Grupo Caliche**
-    * **Sector:** Transporte de mercancías por carretera.
-    * **Ubicación:** Valencia, Almería, Murcia y Barcelona.
-    * **Necesidad potencial:** Integrar datos de rutas, pedidos y stock para mejorar la coordinación.
-2.  **Globaltrans Toledo**
-    * **Sector:** Transporte urgente de paquetería.
-    * **Ubicación:** Toledo.
-    * **Necesidad potencial:** Sincronizar información de entregas y stock en tiempo real.
-3.  **Northwood Dicepa SL**
-    * **Sector:** Fabricación de papel reciclado.
-    * **Ubicación:** Enate, Huesca.
-    * **Necesidad potencial:** Integrar datos de producción, logística y ventas para optimizar procesos.
+* **Pros suyos:**
+    * Cercanía y confianza personal.
+    * Respuesta rápida a problemas de hardware no relacionados con el software.
+* **Nuestra ventaja:**
+    * **Estandarización y Proactividad:** Ofrecemos una solución estandarizada y profesionalizada, con monitorización remota proactiva, no dependemos de la disponibilidad de una sola persona.
+    * **Especialización:** Estamos especializados en el nicho logístico y en el ecosistema de Proxmox/Open Source, no solo en informática general.

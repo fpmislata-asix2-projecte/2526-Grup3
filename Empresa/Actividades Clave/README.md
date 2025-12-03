@@ -1,27 +1,29 @@
 # Actividades Clave
 
-1.  *Desarrollo y mantenimiento del software*
-    * Creación y mejora continua del sistema de integración que conecta GPS, ERP y WMS.
-    * Actualizaciones de funcionalidades, corrección de errores y mejoras en seguridad.
-    * Optimización de la plataforma para que sea fácil de usar y confiable.
 
-2.  *Gestión de servidores y conexión local*
-    * Instalación y mantenimiento de los servidores locales en las empresas clientes.
-    * Configuración de conexiones con hardware y sistemas internos.
-    * Garantía de transmisión de datos en tiempo real entre GPS, ERP y WMS.
+1.  *Diseño y Mantenimiento de la Imagen Maestra*
+   * Creación y prueba continua de la imagen base que incluye  los servicios          esenciales (ERP, Web, LDAP, Docker).
+   * Aplicación de parches de seguridad y actualización de los sistemas operativos y servicios Open Source de la imagen.
+   * Optimización de los recursos virtuales para garantizar rendimiento y fiabilidad.
 
-3.  *Integración de sistemas de clientes*
-    * Adaptación del software a las particularidades de cada empresa.
-    * Sincronización de datos de inventario, rutas y entregas para reducir errores.
+2.  *Despliegue y Puesta en Marcha (Instalación)*
 
-4.  *Soporte y atención al cliente*
-    * Asistencia técnica durante la implementación y operación del sistema.
-    * Resolución de incidencias, consultas y capacitación del personal.
-    * Garantía de adopción correcta de la plataforma.
+   * Ensamblaje físico y configuración inicial de los servidores de hardware estandarizado.
+   * Instalación del hipervisor Proxmox y despliegue de la imagen maestra en la infraestructura del cliente.
+   * Configuración de la red (IP estática, DNS, Gateway) y el Firewall perimetral.
 
-5.  *Análisis y explotación de datos*
-    * Transformación de los datos capturados en información útil.
-    * Generación de reportes y métricas para que los clientes puedan mejorar rutas, inventario y eficiencia.
-    * Feedback continuo para mejorar el propio sistema.
+3.  *Integración de Servicios Internos*
+   * Adaptación de los servicios a las necesidades de la empresa (Configuración de LDAP, ajuste de DNS interno).
+   * Configuración de la sincronización de datos de las herramientas de negocio (ej. conectar el sistema de rastreo GPS al ERP).
 
-6.  *Colaboración con socios estratégicos*
+4.  *Soporte, Monitorización y Mantenimiento Remoto*
+   * Asistencia técnica remota y resolución de incidencias según el plan de servicio contratado.
+   * Monitorización proactiva del "uptime" y estado de salud de los servicios en los servidores desplegados.
+    * Gestión de copias de seguridad programadas y restauración de datos en caso de fallo.
+
+5.  *Análisis de Rendimiento y Optimización*
+   * Recolección de métricas de rendimiento de la infraestructura (uso de CPU, RAM, disco).
+   * Generación de reportes de rendimiento y seguridad para los clientes Enterprise.
+   * Consultoría para optimizar la configuración de recursos virtuales según el crecimiento de la PYME.
+
+6.  *Colaboración con Proveedores de Tecnología*
