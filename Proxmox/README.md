@@ -26,9 +26,19 @@ Proxmox se utiliza comúnmente en:
 
 ---
 
-## 📂 Guías de Documentación de Proxmox
+## Guías de Documentación de Proxmox
 
 Aquí se encuentran las guías detalladas para este proyecto:
 
 * ➡️ **[Instalación del servidor](./Instalación/README.md)**
     * *Guía paso a paso para instalar Proxmox VE desde cero.*
+* ➡️ **[Configuración](./Configuración/README.md)**
+    * *Configuración de interfaces de red, Bridges (vmbr0, redwp), NAT y persistencia de iptables.*
+
+### SERVIDORES
+
+*  ➡️ **[DNS-DHCP](./Servidores/DNS-DHCP/README.md)**
+    * *Configuración de Bind9, ISC-DHCP-Server y zonas DNS directas e inversas.*
+
+* ➡️ **[WEB](./Servidores/WEB/README.md)**
+    * *Instalación de XAMPP (modo texto), despliegue de WordPress y configuración de Base de Datos vía túnel SSH.*
