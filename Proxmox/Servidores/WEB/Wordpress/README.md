@@ -1,5 +1,20 @@
 # Documentación del Proyecto WordPress: Connectix
 
+# Índice de Contenidos
+* [1. Tema e Introducción](#1-tema-e-introducción)
+* [2. Usuarios Creados](#2-usuarios-creados)
+* [3. Plugins Utilizados](#3-plugins-utilizados)
+* [4. Páginas (Estructura Web)](#4-páginas-estructura-web)
+* [5. Entradas, Etiquetas y Categorías](#5-entradas-etiquetas-y-categorías)
+* [6. Tienda Online: WooCommerce (Configuración)](#6-tienda-online-woocommerce-configuración)
+    * [6.6.1. Ajustes Generales](#661-ajustes-generales)
+    * [6.6.2. Métodos de Pago](#662-métodos-de-pago)
+    * [6.6.3. Métodos de Envío](#663-métodos-de-envío)
+    * [6.6.4. Impuestos](#664-impuestos)
+    * [6.6.5. Correos Electrónicos (Emails)](#665-correos-electrónicos-emails)
+    * [6.6.6. Ajustes de Productos e Inventario](#666-ajustes-de-productos-e-inventario)
+    * [6.6.7. Catálogo de Productos](#667-catálogo-de-productos)
+
 # 1. Tema e Introducción
 El sitio web ha sido desarrollado utilizando WordPress como CMS. El objetivo es ofrecer una plataforma para la venta de dispositivos de red (Routers, GPS) y servicios de logística.
 
@@ -81,20 +96,20 @@ Estructura del Blog para mejorar el SEO y la organización del contenido:
 ## 6. Tienda Online: WooCommerce (Configuración)
 Se ha realizado la instalación, configuración y comprobación completa del plugin WooCommerce con los siguientes parámetros:
 
-### Ajustes Generales
+### 6.6.1. Ajustes Generales
 * **Información de la tienda:** Definida ubicación física y datos de facturación de Connectix.
 * **Moneda:** Configurada en Euros (€), con el separador de miles y decimales correspondiente.
 ![](../../../../imágenes/wordpress/wp_7.png)
 ![](../../../../imágenes/wordpress/wp_8.png)
 
-### Métodos de Pago
+### 6.6.2. Métodos de Pago
 Se han habilitado y comprobado tres pasarelas de pago offline:
 1.  **Transferencia bancaria directa.**
 2.  **Contra reembolso.**
 3.  **Pagos por cheque.**
 ![](../../../../imágenes/wordpress/wp_9.png)
 
-### Métodos de Envío
+### 6.6.3. Métodos de Envío
 Configuración de zonas de envío con las siguientes tarifas:
 * **Tarifa plana:** Coste fijo de envío estándar a 10€.
 * **Envío gratuito:** Configurado automáticamente al superar un pedido mínimo de 500€ establecido.
@@ -103,13 +118,12 @@ Configuración de zonas de envío con las siguientes tarifas:
 ![](../../../../imágenes/wordpress/wp_12.png)
 ![](../../../../imágenes/wordpress/wp_13.png)
 
-
-### Impuestos
+### 6.6.4. Impuestos
 * **Configuración fiscal:** Habilitado el cálculo de impuestos automáticos.
 * **Tipos:** Implementado el **IVA General del 21%** para todos los productos.
 ![](../../../../imágenes/wordpress/wp_14.png)
 
-### Correos Electrónicos (Emails)
+### 6.6.5. Correos Electrónicos (Emails)
 Se ha personalizado el sistema de notificaciones transaccionales:
 * **Flujo comprobado:** Avisos de "Nuevo Pedido" (al administrador) y "Pedido Completado" (al cliente).
 * **Identidad:** Personalización del "Remitente", inclusión del **Logo** de Connectix y ajuste del **Color base** de la plantilla para coincidir con la marca.
@@ -117,13 +131,13 @@ Se ha personalizado el sistema de notificaciones transaccionales:
 ![](../../../../imágenes/wordpress/wp_16.png)
 ![](../../../../imágenes/wordpress/wp_17.png)
 
-### Ajustes de Productos e Inventario
+### 6.6.6. Ajustes de Productos e Inventario
 * **Datos físicos:** Configurados pesos y dimensiones (medidas) en los productos para cálculos logísticos.
 * **Stock:** Gestión de inventario activada (control de existencias y avisos de stock bajo).
 * **Social:** Activada la opción de dejar **valoraciones y estrellas** en las fichas de producto.
 ![alt text](../../../../imágenes/wordpress/wp_18.png)
 
-### Catálogo de Productos
+### 6.6.7. Catálogo de Productos
 Se han creado y publicado al menos **4 productos vendibles** de prueba, incluyendo:
 * Imágenes destacadas.
 * Descripciones cortas y largas.
