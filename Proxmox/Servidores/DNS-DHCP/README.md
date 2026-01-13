@@ -1,3 +1,14 @@
+# Índice de Contenidos
+
+* [4. Configuración del Servidor de Infraestructura (DNS y DHCP)](#4-configuración-del-servidor-de-infraestructura-dns-y-dhcp)
+* [4.2. Configuración del Servicio DHCP](#42-configuración-del-servicio-dhcp)
+* [4.3. Configuración del Servicio DNS](#43-configuración-del-servicio-dns)
+    * [4.3.1 Opciones Globales y Reenvío](#431-opciones-globales-y-reenvío)
+    * [4.3.2 Declaración de Zonas Locales](#432-declaración-de-zonas-locales)
+    * [4.3.3 Archivo de Zona Directa](#433-archivo-de-zona-directa)
+    * [4.3.4 Archivo de Zona Inversa](#434-archivo-de-zona-inversa)
+* [4.4. Configuración del Resolver Local (resolv.conf)](#44-configuración-del-resolver-local-resolvconf)
+
 # 4\. Configuración del Servidor de Infraestructura (DNS y DHCP)
 
 El servidor `dnsydhcpgrupo3` actúa como el controlador principal de la red interna, proporcionando direccionamiento IP dinámico y resolución de nombres.

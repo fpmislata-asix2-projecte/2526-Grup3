@@ -1,3 +1,18 @@
+# Índice de Contenidos
+
+* [5. Configuración del Servidor Web (WordPress)](#5-configuración-del-servidor-web-wordpress)
+* [5.1. Instalación de XAMPP (Pila LAMP)](#51-instalación-de-xampp-pila-lamp)
+* [5.2. Despliegue de Archivos de WordPress](#52-despliegue-de-archivos-de-wordpress)
+* [5.3. Acceso Remoto Seguro (Túnel SSH) y Base de Datos](#53-acceso-remoto-seguro-túnel-ssh-y-base-de-datos)
+* [5.4. Instalación Final de WordPress](#54-instalación-final-de-wordpress)
+* [5.5. Configuración de Dominio Propio](#55-configuración-de-dominio-propio)
+  * [5.5.1. Resolución de Nombres (Cliente y Servidor)](#551-resolución-de-nombres-cliente-y-servidor)
+  * [5.5.2. Configuración del Servidor Web (Apache)](#552-configuración-del-servidor-web-apache)
+  * [5.5.3. Ajustes del Núcleo de WordPress](#553-ajustes-del-núcleo-de-wordpress)
+  * [5.5.4. Solución de Estructura de Archivos (Enlace Simbólico)](#554-solución-de-estructura-de-archivos-enlace-simbólico)
+  * [5.5.5. Verificación](#555-verificación)
+
+
 # 5\. Configuración del Servidor Web (WordPress)
 
 El servidor `wordpressg3` aloja la aplicación web. Se opta por utilizar la pila **XAMPP** y un túnel SSH para la configuración visual remota.
@@ -127,7 +142,7 @@ Tras completar este proceso, el CMS WordPress queda. totalmente operativo y acce
 
 Una vez instalado WordPress, se realizó una configuración avanzada para permitir el acceso mediante el dominio `www.connectix.es` (eliminando la necesidad de escribir `/wordpress` en la URL) y solucionar problemas de rutas con plugins.
 
-### 1. Resolución de Nombres (Cliente y Servidor)
+### 5.5.1. Resolución de Nombres (Cliente y Servidor)
 
 Como el dominio no es público, se simuló la resolución DNS en el cliente (Windows) y se configuró el enrutamiento en el servidor (Proxmox).
 
@@ -151,7 +166,7 @@ iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport 443 -j DNAT --to 192.168.1
 ```
 ![](../../../imágenes/WEB/web_15.png)
 
-### 2. Configuración del Servidor Web (Apache)
+### 5.5.2. Configuración del Servidor Web (Apache)
 
 Se modificó la configuración de Apache para servir la web desde la raíz del dominio.
 
@@ -164,7 +179,7 @@ DocumentRoot "/opt/lampp/htdocs/wordpress"
 ```
 ![](../../../imágenes/WEB/web_16.png)
 
-### 3. Ajustes del Núcleo de WordPress
+### 5.5.3. Ajustes del Núcleo de WordPress
 
 Se editó el archivo `wp-config.php` para definir la nueva identidad del sitio y permitir la gestión de archivos.
 
@@ -176,7 +191,7 @@ define( 'WP_SITEURL', 'https://www.connectix.es' );
 ```
 ![](../../../imágenes/WEB/web_17.png)
 
-### 4. Solución de Estructura de Archivos (Enlace Simbólico)
+### 5.5.4. Solución de Estructura de Archivos (Enlace Simbólico)
 
 Para solucionar errores con plugins de migración (como *All-in-One WP Migration*) que no encontraban la ruta correcta debido al cambio de `DocumentRoot`, se implementó un enlace simbólico.
 
@@ -191,6 +206,6 @@ sudo chmod -R 777 /opt/lampp/htdocs/wordpress/wp-content
 ```
 ![](../../../imágenes/WEB/web_18.png)
 
-### 5. Verificación
+### 5.5.5. Verificación
 Y como podemos comprobar en la imagen, hemos accedido a nuestro Wordpress con el enlace que hemos configurado.
 ![](../../../imágenes/WEB/web_19.png)
