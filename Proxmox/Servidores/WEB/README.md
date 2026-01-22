@@ -151,7 +151,7 @@ Se modificó el archivo `C:\Windows\System32\drivers\etc\hosts` para apuntar el 
 Esto "engaña" al navegador para que sepa que `www.connectix.es` corresponde a nuestro servidor.
 
 ```powershell
-172.16.204.138 www.connectix.es connectix.es
+172.16.204.233 www.connectix.es connectix.es
 ```
 ![](../../../imágenes/WEB/web_14.png)
 
@@ -163,6 +163,7 @@ Permite que las peticiones externas lleguen a la VM interna de forma transparent
 # Redirección de puertos 80 y 443 a la IP de la VM
 iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport 80 -j DNAT --to 192.168.18.10:80
 iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport 443 -j DNAT --to 192.168.18.10:443
+netfilter-persistent save
 ```
 ![](../../../imágenes/WEB/web_15.png)
 
