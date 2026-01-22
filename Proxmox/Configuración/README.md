@@ -128,7 +128,7 @@ Se crearon al menos dos máquinas virtuales (DNS/DHCP y WordPress) siguiendo est
 | Máquina | IP Asignada | Gateway | DNS |
 | :--- | :--- | :--- | :--- |
 | **DNS/DHCP Server** | `192.168.18.1/24` | `192.168.18.254` | `1.1.1.1.1`, `8.8.8.8` |
-| **WordPress Server** | `DHCP` | `DHCP` | `DHCP` |
+| **WordPress Server** | `DHCP` | `DHCP` | `192.168.18.1, 8.8.8.8` |
 
 ![](../../imágenes/px_conf/px_conf_15.png)
 ![](../../imágenes/px_conf/px_conf_16.png)
