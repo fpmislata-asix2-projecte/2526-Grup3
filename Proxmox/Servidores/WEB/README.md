@@ -17,6 +17,7 @@
 
 El servidor `wordpressg3` aloja la aplicación web. Se opta por utilizar la pila **XAMPP** y un túnel SSH para la configuración visual remota.
 Antes de nada se añadió, un adaptador vmbr0 que va a la red externa de Proxmox para poder obtener conexión SSH, se le asigno una IP del rango de esa red, la ip 172.16.204.138.
+
 ![](../../../imágenes/WEB/web_13.png)
 
 ## 5.1. Instalación de XAMPP (Pila LAMP)
@@ -146,6 +147,7 @@ Una vez instalado WordPress, se realizó una configuración avanzada para permit
 
 Como el dominio no es público, se simuló la resolución DNS en el cliente (Windows) y se configuró el enrutamiento en el servidor (Proxmox).
 
+#### Opción A
 **A. Archivo Hosts (Windows):**
 Se modificó el archivo `C:\Windows\System32\drivers\etc\hosts` para apuntar el dominio a la IP del servidor Proxmox.
 Esto "engaña" al navegador para que sepa que `www.connectix.es` corresponde a nuestro servidor.
@@ -166,6 +168,28 @@ iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport 443 -j DNAT --to 192.168.1
 netfilter-persistent save
 ```
 ![](../../../imágenes/WEB/web_15.png)
+
+#### Opción B
+Para permitir que equipos externos (en la red 172.16.204.x/24) accedan a los servicios internos de forma transparente y sin comandos de consola, se ha optado por una configuración de red estándar basada en el enrutamiento centralizado a través de Proxmox.
+
+* **Reglas aplicadas (Proxmox):**
+    ```bash
+    iptables -t nat -A PREROUTING -i vmbr0 -p udp --dport 53 -j DNAT --to 192.168.18.1
+    iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport 53 -j DNAT --to 192.168.18.1
+    netfilter-persistent save
+    ```
+    ![](../../../imágenes/WEB/web_20.png)
+
+**Configuración del adaptador de red en el Cliente:**
+* **Dirección IP:** Una IP libre del rango 172.16.204.x.
+* **Puerta de Enlace (Gateway):** `172.16.204.233` (IP de Proxmox).
+    * *Permite que el cliente sepa llegar a la red privada `192.168.18.0` delegando el tráfico en Proxmox, quien actúa como router entre ambas zonas.*
+* **Servidor DNS:** `172.16.204.233` (IP de Proxmox).
+    * *Permite resolver el dominio `connectix.es` gracias al reenvío DNS configurado en el punto 5.7.*
+
+
+**Resultado:**
+El cliente accede a `www.connectix.es` resolviendo la IP interna, y la comunicación fluye correctamente a través del hipervisor sin necesidad de NAT Reflection ni configuraciones de rutas estáticas manuales.
 
 ### 5.5.2. Configuración del Servidor Web (Apache)
 
