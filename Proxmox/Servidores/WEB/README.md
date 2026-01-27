@@ -94,8 +94,6 @@ Desde el ordenador cliente (Windows/Linux), se ejecutó el siguiente comando par
 # Comando ejecutado desde el host cliente
 ssh -L 8443:localhost:443 grupo3@172.16.204.138
 ```
-imagen
-
 Pudimos saber los puertos gracias al comando:
 ```bash
 ss -ntlp
