@@ -20,6 +20,7 @@ Esta configuración consolida el puente WAN (`vmbr0`) con el puente LAN (`redwp`
 La configuración es la siguiente:
 
 ![](../../imágenes/px_conf/px_conf_1.png)
+
 Una vez modificado el archivo, se aplican los cambios:
 
 ```bash
