@@ -140,3 +140,80 @@ Si hemos hecho la configuración de la red Interna y el NAT, ambos Servers deber
 Y acceso a Internet.
 ![](../../imágenes/px_conf/px_conf_20.png)
 ![](../../imágenes/px_conf/px_conf_21.png)
+
+# 4. Resolución de Incidencias: Ampliación de Almacenamiento
+Durante el proceso de escalado de la infraestructura para implementar la Alta Disponibilidad (Clonación de nodos), nos encontramos con un error crítico de almacenamiento que impedía el funcionamiento del servidor Proxmox.
+
+## 4.1. Descripción del Problema
+Al intentar realizar un **Full Clone** de la máquina virtual `ServerWEB` (VM 100) para crear el segundo nodo, el proceso fallaba o dejaba el servidor inoperativo (bloqueo de interfaz web y errores *connection timed out*).
+
+El log de tareas de Proxmox arrojó el siguiente error crítico:
+
+> `WARNING: Sum of all thin volume sizes (96.00 GiB) exceeds the size of whole volume group (<59.00 GiB).`
+
+### Análisis del Error
+Este mensaje indicaba un problema de **Sobreasignación (Overprovisioning)**.
+
+* **Capacidad real asignada a VMs:** El volumen lógico `data` tenía un tamaño físico de **~20 GB**.
+* **Demanda de recursos:** Se intentaron iniciar 3 máquinas virtuales con discos de 32 GB cada una (Total: 96 GB).
+* **Consecuencia:** Al superar el espacio físico real disponible, el *Thin Pool* colapsaba, bloqueando los servicios `pvestatd` y `pvedaemon` del hipervisor.
+
+## 4.2. Diagnóstico
+
+Para verificar la estructura del disco físico, accedimos a la terminal del nodo y ejecutamos el comando `lsblk`.
+**Resultado del diagnóstico:**
+Se observó que, aunque el disco físico (`nvme0n1`) tenía una capacidad de **465.8 GB**, Proxmox solo estaba utilizando una partición de **59 GB** (`nvme0n1p3`), dejando aproximadamente **400 GB de espacio sin asignar** ni utilizar.
+
+```bash
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+nvme0n1     259:0    0 465.8G  0 disk
+├─nvme0n1p3 259:3    0    59G  0 part  <-- Solo 59GB usados
+│ ├─pve-data...      0    20G  0 lvm   <-- Solo 20GB para VMs
+```
+
+## 4.3. Solución Implementada: Expansión del LVM
+Para recuperar el espacio no utilizado y asignarlo al almacenamiento de máquinas virtuales sin reinstalar el servidor, realizamos el siguiente procedimiento de "cirugía en caliente" sobre las particiones.
+
+### Paso 1: Copia de Seguridad
+
+Antes de modificar la tabla de particiones, se realizaron **Backups** de las VMs existentes (`vma.zst`) en el almacenamiento `local` y se descargaron a un equipo externo para garantizar la integridad de los datos.
+
+### Paso 2: Instalación de Herramientas
+Instalamos `parted` para gestionar las particiones desde la línea de comandos:
+
+```bash
+apt update && apt install parted -y
+```
+
+### Paso 3: Redimensionado de la Partición Física
+Se expandió la partición 3 para que ocupara el 100% del espacio libre del disco NVMe:
+
+```bash
+parted /dev/nvme0n1 resizepart 3 100%
+```
+
+### Paso 4: Actualización del Volumen Físico (LVM)
+Notificamos al kernel y al gestor LVM que el tamaño del dispositivo físico había cambiado:
+
+```bash
+pvresize /dev/nvme0n1p3
+```
+*Salida:* `Physical volume "/dev/nvme0n1p3" changed`
+
+### Paso 5: Extensión del Thin Pool
+Finalmente, asignamos todo el nuevo espacio libre al volumen lógico `data` (donde se alojan los discos de las VMs):
+
+```bash
+lvextend -l +100%FREE /dev/pve/data
+```
+*Salida:* `Logical volume pve/data successfully resized.`
+
+## 4.4. Verificación de Resultados
+Tras la operación, se volvió a ejecutar `lsblk` y `lvs` para confirmar la nueva capacidad.
+
+* **Capacidad anterior:** 20 GB.
+* **Nueva capacidad:** **433 GB**.
+* **Estado:** El sistema pasó de estar saturado al 100% a tener una ocupación real inferior al **4%**.
+![](../../imágenes/px_conf/px_conf_22.png)
+
+Esto permitió realizar la clonación completa (**Full Clone**) del Nodo 2 y encender simultáneamente toda la infraestructura (DNS + Web1 + Web2) sin problemas de rendimiento.
