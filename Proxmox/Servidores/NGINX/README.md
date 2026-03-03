@@ -83,6 +83,5 @@ iptables -t nat -A POSTROUTING -s 192.168.18.0/24 -o vmbr0 -j MASQUERADE
 Para evitar perder la configuración al reiniciar Proxmox:
 
 ```bash
-apt-get install iptables-persistent
 netfilter-persistent save
 ```
